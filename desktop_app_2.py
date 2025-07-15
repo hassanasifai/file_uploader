@@ -281,7 +281,7 @@ class FolderUploaderApp:
         def fetch_lists():
             import requests
             try:
-                resp = requests.get("http://192.168.18.70:5000/6/lists", timeout=5)
+                resp = requests.get("http://192.168.100.141:5000/6/lists", timeout=5)
                 data = resp.json()
                 lists = data.get("lists", [])
                 self.list_options = [(item["list_id"], item["user_data"]) for item in lists]
